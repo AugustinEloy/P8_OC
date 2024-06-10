@@ -1,28 +1,22 @@
-import logo1 from '../LOGO.png'
-import '../App.css'
-import imgh from '../assets/IMG.png'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo1 from '../LOGO.png';
+import '../App.css';
+
 function Hello() {
     return (
-      <>
+      
       <div className='header'>
         <div className='logo'>  
               <img src={logo1} alt='logo'/>
         </div>
         <div className='liste'>
-          <li>Accueil</li>
-          <li onClick={AproposClick}>A Propos</li>
+          <li><Link to="/">Accueil</Link></li>
+          <li><Link to="/apropos">A Propos</Link></li>
         </div>
-     </div>
-     <div  className='imgh'>
-        <img src={imgh} alt='img'/>
-        <div className='overlay'></div>
-        <p>Chez vous partout et ailleurs</p>
-     </div>
-     </>
+        </div>
+    
         
     );
-  }
-  function AproposClick (){
-    console.log('sa marche bg')
   }
 export default Hello

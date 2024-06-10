@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import '../App.css'
 import LogementData from '../data/logements.json'
+import imgh from '../assets/IMG.png';
 
 
 
@@ -11,10 +12,11 @@ function Check (){
 }
 
 function Card (){
-    return(
+    return(  
         <div className ="card">
             <h2>titre de la locaction</h2>
         </div>
+    
     )
 }
 
@@ -23,11 +25,19 @@ function Body(){
             Check(); 
          }, []);
     return(
+        <>
+        <div className='imgh'>
+            <img src={imgh} alt='img'/>
+                <div className='overlay'>
+                </div>
+                <p>Chez vous partout et ailleurs</p>
+        </div>
         <div className='test'>
             <div className ="cards">
             < Card />
             </div>
         </div>
+        </>
     )
 }
 export default Body;
