@@ -65,27 +65,38 @@
   width: 95%;
   border-radius: 5px;
   margin-top: 5%;
-  height: 829px;
+  height: 100%;
 }
 .cards{
   display: flex;
   flex-wrap: wrap;
-  gap: 10%;
+  gap: 5%;
   padding-left: 5%;
   padding-top:  5%; 
   padding-bottom: 5%;
 
 }
 .card{
-  width: 25%; 
+  width: 300px;
+  height: 340px; 
   background-color: rgba(255, 96, 96, 1);
   border-radius: 20px;
+  overflow: hidden; 
+  position: relative; 
+  margin-top: 5%;
+
 }
+
 .cards h2{
+  position: absolute; 
+  bottom: 0;
+  left: 0;
   display: flex;
   justify-content: flex-start;
   color: white;
-  
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 
 .footer{
@@ -114,4 +125,116 @@
   border-radius: 10px;
   width: 80%;
   height: 223px;
+}
+
+.page_e{
+  width: 100%;
+  text-align: center;
+}
+
+.page_e h1{
+  color: rgba(255, 96, 96, 1);
+  font-size: 200px;
+  margin-top: -1%;
+  
+}
+
+.page_e p {
+  color: rgba(255, 96, 96, 1);
+  margin-top: -1%;
+}
+.btnc{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+
+}
+.contentc {
+  padding: 0 18px;
+  border-radius: 0px 0px 5px 5px;
+  width: 360px;
+  overflow: hidden;
+  background-color: rgba(246, 246, 246, 0.45);
+}
+.butcola{
+  text-align: start;
+  color: white;
+  margin-right: 2%;
+  background-color:  rgba(255, 96, 96, 1);
+  width: 400px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btnApps{
+  text-align: center;
+  width: 800px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  font-size: 15px;
+  background-color:  rgba(255, 96, 96, 1) ;
+  border-radius: 5px;
+  margin: 10px 0 ;
+}
+.contentApps{
+  width: 800px;
+  
+  overflow: hidden;
+  background-color:rgba(246, 246, 246, 0.45) ;
+  margin-top: -8px;
+  border-radius: 0px 0px 5px 5px;
+}
+.appsbtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stars{
+  display: flex;
+  justify-content: end;
+  margin-right: 5%;
+  margin-bottom: 8%;
+}
+.lpimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ margin-top: 5%;
+  width: 1200px;
+  height: 415px;
+  border-radius: 15px;
+
+}
+.lpall h2{
+  color: rgba(255, 96, 96, 1);
+}
+.equiplp{
+display: flex;
+flex-direction: column;
+margin-bottom: 5px;
+}
+.contentlp{
+  margin-left: 3%;
+}
+.taglp{
+  margin-right: 5%;
+  margin-top: 3%;
+  width: 15%;
+  height: 25px;
+  border-radius: 15px;
+  background-color:  rgba(255, 96, 96, 1);
+  border: none;
+
+}
+@media only screen and ( max-device-width : 480px) {
+  .imgh{
+    width: 50px;
+  }
 }
