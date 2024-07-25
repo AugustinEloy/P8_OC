@@ -11,8 +11,8 @@ function Hello() {
               <img src={logo1} alt='logo'/>
         </div>
         <div className='liste'>
-          <li><Link to="/">Accueil</Link></li>
-          <li><Link to="/apropos">A Propos</Link></li>
+          <li><Link to="/" style={{textDecoration:'none' , color: 'black'}}>Accueil</Link></li>
+          <li><Link to="/apropos" style={{textDecoration:'none' , color: 'black'}}>A Propos</Link></li>
         </div>
         </div>
     

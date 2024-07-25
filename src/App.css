@@ -1,10 +1,11 @@
-
+                          /****************Header.js***********/
 .header{
   display: flex;
   justify-content: space-between;
   margin-top: 5%;
   margin-right: 5%;
   margin-left: 5%;
+  align-items: center;
 }
 .liste li{
   list-style: none;
@@ -19,9 +20,12 @@
   width: 80%;
 }
 .liste{
+  width: 100%;
   display: flex;
   justify-content: flex-end;
+  gap: 10%;
 }
+            /*********************   Body.js   **************/
 .imgh{
   position: relative;
   margin-top: 2%;
@@ -90,18 +94,20 @@
 .cards h2{
   position: absolute; 
   bottom: 0;
-  left: 0;
   display: flex;
   justify-content: flex-start;
   color: white;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden; 
   text-overflow: ellipsis; 
+  box-sizing: border-box;
+  word-wrap: break-word ;
+  font-size: 18px;
 }
-
+                              /************    Footer    *******/
 .footer{
-  background-color: rgba(0, 0, 0, 1);
   width: 100%;
+  background-color: rgba(0, 0, 0, 1); 
   height: 209px;
   text-align: center;
   margin-top: 5%;
@@ -113,20 +119,8 @@
   color:white;
   padding-top: 1%;
 }
-.apps{
-  margin-top: 2%;
-  width: 100%;
-  height: 223px;
-  display: flex;
-  justify-content: center;
-}
-.apps img{
-  position: absolute;
-  border-radius: 10px;
-  width: 80%;
-  height: 223px;
-}
 
+                        /******************   Error.js   **************/
 .page_e{
   width: 100%;
   text-align: center;
@@ -143,27 +137,106 @@
   color: rgba(255, 96, 96, 1);
   margin-top: -1%;
 }
-.btnc{
+                            /***********   logementpage.js   ************/
+.lppos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
+  margin-left: 3%;
+}
+
+.lpimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 94%;
+  height: 415px;
+  border-radius: 15px;
+
+}
+.tllp h2{
+  color: rgba(255, 96, 96, 1) ;
+
+}
+.hspos{
+  margin-right: 3%;
+}
+.hostlp{
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+ text-align: left;
+}
+.hostlp p{
+  color: rgba(255, 96, 96, 1);
+  padding: 0;
+  margin-right: 0;
+}
+.hostlp img{
+  width: 64px;
+  border-radius: 50px;
+  padding: 0;
+  margin-left: 0;
+
+  
+}
+
+.starpos{
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
- 
-
+  justify-content: flex-end;
+  margin-right: 3%;
+}
+.taglppos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+.taglp{
+  flex-basis: calc(32% - 1%);
+  margin-top: 3%;
+  width: 32%;
+  height: 25px;
+  border-radius: 15px;
+  background-color:  rgba(255, 96, 96, 1);
+  border: none;
+  color: #F6F6F6;
+  box-sizing: border-box;
+}
+.starpos{
+  margin-top: 30%;
+}
+.stars{
+  display: flex;
+  
+}
+.btnc{
+  display: flex;
+  justify-content: space-between;
+  gap: 20%;
+  margin-left: 3%;
 }
 .contentc {
   padding: 0 18px;
   border-radius: 0px 0px 5px 5px;
-  width: 360px;
+  width: 87%;
   overflow: hidden;
   background-color: rgba(246, 246, 246, 0.45);
 }
+.container-colaps {
+  width: 100%; 
+}
 .butcola{
-  text-align: start;
+ display: flex;
+ justify-content: space-between;
+  text-align: center;
+  align-items: center;
   color: white;
   margin-right: 2%;
   background-color:  rgba(255, 96, 96, 1);
-  width: 400px;
+  width: 94% ;
   height: 40px;
   border: none;
   outline: none;
@@ -171,9 +244,33 @@
   cursor: pointer;
   border-radius: 5px;
 }
+.arrowbtn {
+  transition: transform 1s;
+}
+
+.arrowbtn.rotate {
+  transform: rotate(180deg);
+}
+.equiplp{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  }
+                                        /***** Apropos.js****/
+ .ContainerApps{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}                                       
 .btnApps{
+  display: flex;
+  justify-content: space-between;
   text-align: center;
-  width: 800px;
+  align-items: center;
+  color: white;
+  width: 70%;
   border: none;
   cursor: pointer;
   outline: none;
@@ -184,8 +281,7 @@
   margin: 10px 0 ;
 }
 .contentApps{
-  width: 800px;
-  
+  width: 70%;
   overflow: hidden;
   background-color:rgba(246, 246, 246, 0.45) ;
   margin-top: -8px;
@@ -196,45 +292,334 @@
   flex-direction: column;
   align-items: center;
 }
-.stars{
+.apps{
+  margin-top: 2%;
+  width: 100%;
+  height: 223px;
   display: flex;
-  justify-content: end;
-  margin-right: 5%;
-  margin-bottom: 8%;
+  justify-content: center;
 }
-.lpimg{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
- margin-top: 5%;
-  width: 1200px;
-  height: 415px;
-  border-radius: 15px;
-
+.apps img{
+  position: absolute;
+  border-radius: 10px;
+  width: 80%;
+  height: 223px;
+  object-fit: cover;
 }
-.lpall h2{
-  color: rgba(255, 96, 96, 1);
-}
-.equiplp{
-display: flex;
-flex-direction: column;
-margin-bottom: 5px;
-}
-.contentlp{
-  margin-left: 3%;
-}
-.taglp{
-  margin-right: 5%;
-  margin-top: 3%;
-  width: 15%;
-  height: 25px;
-  border-radius: 15px;
-  background-color:  rgba(255, 96, 96, 1);
-  border: none;
-
+.overlay2{
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  height: 223px;
+  border-radius: 10px;
 }
 @media only screen and ( max-device-width : 480px) {
-  .imgh{
-    width: 50px;
+                                /*********header.js**********/
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    align-items: center;
+    margin-bottom: 5%;
   }
+  .liste {
+    display: flex;
+
+  }
+  .logo{
+    width: 100%;
+    display:flex;
+    justify-content: flex-start;
+    margin-left: 6%;
+    
+  }
+  .logo img{
+    width: 80%;
+    height: 46.88px;
+  }
+  .liste{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10%;
+  }
+                        /************************Body.js**************************/
+.imgh{
+  position: relative;
+  margin-top: 2%;
+  align-items: center;
+  width: 95%;
+  height: 111px;
+  display: flex;
+  margin: auto;
+  margin-bottom: -10%;
+  
+}
+.imgh img{
+  position:absolute;
+  z-index: 0;
+  border-radius: 10px;
+  width:95% ;
+  height: 111px;
+
+}
+
+.imgh p{
+  color:white;
+  position: absolute;
+  z-index: 2 ;
+  display: flex;
+  justify-content: center; 
+  font-size: 24px;
+  width: 95%;
+
+}
+.overlay{
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 95%;
+  height: 111px;
+  border-radius: 10px;
+}
+.test{
+  
+  display: flex;
+  background-color: white;  
+  width: 100%;
+  justify-content: center;
+}
+.cards{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+ 
+  
+}
+.card{
+  width: 95%;
+  height: 255px; 
+  background-color: rgba(255, 96, 96, 1);
+  border-radius: 20px;
+  overflow: hidden; 
+  position: relative; 
+
+
+}
+
+.cards h2{
+  position: absolute; 
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  white-space: normal;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  box-sizing: border-box;
+  word-wrap: break-word ;
+  font-size: 18px;
+}
+                        /************************* Footer.js***********************/
+.footer{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1); 
+  height: 209px;
+  text-align: center;
+  margin-top: 5%;
+}
+.content{
+  padding-top: 7%;
+}
+.footer p{
+  color:white;
+  padding-top: 1%;
+}
+
+                        /************************logementpage.js******************/
+  .lppos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0%;
+  }
+  .lpimg{
+    width: 90%;
+    height: 255px;
+  }
+  .contentlp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-left: 0;
+    width: 100%; 
+  }
+  .tllp {
+    width: 100%; 
+    text-align: left; 
+    margin: 0; 
+    padding: 0; 
+  }
+
+  .taglppos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+    gap: 1%;
+  }
+
+  .taglp{
+    
+    margin-top: 3%;
+    width: 25%;
+    height: 25px;
+    border-radius: 15px;
+    background-color:  rgba(255, 96, 96, 1);
+    border: none;
+    color: #F6F6F6;
+  }
+  .hspos{
+    
+    width: 100%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+    align-items:baseline;
+
+  }
+  .hostlp {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+  
+  .starpos {
+    display: flex;
+   justify-content: flex-start;
+   margin-top: 0%;
+    
+  }
+  .stars{
+    display: flex;
+    
+  }
+
+  .btnc{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+  }
+  .contentc {
+    padding: 0 18px;
+    border-radius: 0px 0px 5px 5px;
+    width: 87%;
+    overflow: hidden;
+    background-color: rgba(246, 246, 246, 0.45);
+  }
+  .container-colaps {
+    width: 100%; 
+    
+  }
+  .butcola{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-right: 2%;
+    background-color:  rgba(255, 96, 96, 1);
+    width: 94% ;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .equiplp{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    }
+                                          /***** Apropos.js****/
+.ContainerApps{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btnApps{
+  text-align: start;
+  color: white;
+  width: 90%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  font-size: 15px;
+  background-color:  rgba(255, 96, 96, 1) ;
+  border-radius: 5px;
+  margin: 10px 0 ;
+}
+.contentApps{
+  width: 90%;
+  overflow: hidden;
+  background-color:rgba(246, 246, 246, 0.45) ;
+  margin-top: -8px;
+  border-radius: 0px 0px 5px 5px;
+}
+.appsbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  width: 100%;
+  
+}
+.apps{
+  margin-top: 2%;
+  width: 100%;
+  height: 111px;
+  display: flex;
+  justify-content: center;
+}
+.apps img{
+  position: absolute;
+  border-radius: 10px;
+  width: 80%;
+  height: 111px;
+  object-fit: cover;
+}
+.arrowbtn {
+  transition: transform 1s;
+}
+
+.arrowbtn.rotate {
+  transform: rotate(180deg);
+}
+.overlay2{
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  height: 111px;
+  border-radius: 10px;
+}
 }

@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import {  useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 console.log({LogementData})
 function StarsColor({ rating }) {
@@ -29,8 +30,12 @@ function StarsColor({ rating }) {
     setIsOpen(!isOpen);
    }
    return(
-    <div>
-      <button className='butcola' onClick={toggle}> {label}</button>
+    <div className='container-colaps'>
+      <button className='butcola' > 
+         <span>{label}</span>
+         <FontAwesomeIcon icon={faChevronUp}  onClick={toggle} 
+          className={`arrowbtn ${isOpen ? 'rotate' : ''}`}/>
+      </button>
       {isOpen && (
          <div className='contentc'>
          <p>{children}</p>
@@ -54,33 +59,46 @@ function Logementsaffichage (){
 
    
    return(
-      
+
    <div className='lpall' key ={logement.id}>
       <img className='lpimg' src={logement.pictures[0]}></img>
-         <div className='contentlp'>
-            <h2>{logement.title}</h2>
-            <p>{logement.location}</p>
-            <img src={hostimg}></img>
-            <p>{host}</p>
-            {tags.map((tag, index) => (
-               <button className='taglp' key={index}>{tag}</button>
-            ))}
-               <div className='stars'>
-                  <StarsColor rating={rating} />
-               </div> 
-
+         <div className='lppos'>  
+            <div className='contentlp'>    
+                  <div className='tllp'>
+                     <h2>{logement.title}</h2>
+                     <p>{logement.location}</p>
+                  </div>
+                     <div className='taglppos'>
+                           {tags.map((tag, index) => (
+                              <button className='taglp' key={index}>{tag}</button>
+                           ))}
+                     </div>
+            </div>     
+               <div className='hspos'>
+                  <div className='hostlp'>
+                     <p>{host}</p>
+                     <img src={hostimg} alt='host'></img>
+                  </div>
+                  <div className='starpos'>
+                     <div className='stars'>
+                           <StarsColor rating={rating} />
+                     </div> 
+                  </div>
+               </div>
+         </div> 
                   <div className='btnc'>
-                     <Colap label='description'>
-                     <p>{logement.description}</p>
+                     <Colap label='Description'>
+                        <p>{logement.description}</p>
                      </Colap>
-                     <Colap label='equipement'>
-                     {logement.equipments.map((equipment, index) => (
-                        <p key={index} className='equiplp'>{equipment}</p>
-                        ))}
+                     <Colap label='Equipement'>
+                        {logement.equipments.map((equipment, index) => (
+                           <p key={index} className='equiplp'>{equipment}</p>
+                           ))}
                      </Colap>
                   </div>
-         </div>
+                      
    </div>
+   
    )
    
 }
