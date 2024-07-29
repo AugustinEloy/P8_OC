@@ -94,6 +94,8 @@
 .cards h2{
   position: absolute; 
   bottom: 0;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   justify-content: flex-start;
   color: white;
@@ -136,6 +138,9 @@
 .page_e p {
   color: rgba(255, 96, 96, 1);
   margin-top: -1%;
+}
+.page_e li{
+  list-style: none;
 }
                             /***********   logementpage.js   ************/
 .lppos{
@@ -415,6 +420,8 @@
 .cards h2{
   position: absolute; 
   bottom: 0;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   justify-content: flex-start;
   color: white;
@@ -622,4 +629,29 @@
   height: 111px;
   border-radius: 10px;
 }
+                                       /***** Error.js****/
+.page_e{
+  width: 100%;
+  text-align: center;
+}
+
+.page_e h1{
+  color: rgba(255, 96, 96, 1);
+  font-size: 200px;
+  margin-top: -1%;
+  
+}
+
+.page_e p {
+  color: rgba(255, 96, 96, 1);
+  margin-top: -15%;
+  font-size: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.page_e li{
+  list-style: none;
+  margin-top: 40%;
+}
+
 }
