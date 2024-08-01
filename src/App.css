@@ -13,7 +13,7 @@
 .logo{
   display:flex;
   justify-content: flex-start;
-  margin-left: 6%;
+  margin-left: 1%;
   
 }
 .logo img{
@@ -39,7 +39,7 @@
   position:absolute;
   z-index: 0;
   border-radius: 10px;
-  width:80% ;
+  width: 90%;
   height: 225px;
 
 }
@@ -58,7 +58,7 @@
   position: absolute;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 80%;
+  width: 90%;
   height: 225px;
   border-radius: 10px;
 }
@@ -66,7 +66,7 @@
   background-color: #F6F6F6;
   display: flex;
   margin: auto;
-  width: 95%;
+  width: 90%;
   border-radius: 5px;
   margin-top: 5%;
   height: 100%;
@@ -78,10 +78,11 @@
   padding-left: 5%;
   padding-top:  5%; 
   padding-bottom: 5%;
+  width: 100%;
 
 }
 .card{
-  width: 300px;
+  width: 28%;
   height: 340px; 
   background-color: rgba(255, 96, 96, 1);
   border-radius: 20px;
@@ -89,6 +90,18 @@
   position: relative; 
   margin-top: 5%;
 
+}
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 20px; 
+  pointer-events: none;
+  z-index: 1; 
 }
 
 .cards h2{
@@ -105,6 +118,7 @@
   box-sizing: border-box;
   word-wrap: break-word ;
   font-size: 18px;
+  z-index: 2;
 }
                               /************    Footer    *******/
 .footer{
@@ -173,6 +187,7 @@
  align-items: center;
  flex-direction: row;
  text-align: left;
+ margin-top: 5%;
 }
 .hostlp p{
   color: rgba(255, 96, 96, 1);
@@ -262,14 +277,14 @@
   margin-bottom: 5px;
   }
                                         /***** Apropos.js****/
- .ContainerApps{
+ .appsbtn .container-colaps{
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }                                       
-.btnApps{
+.appsbtn .butcola{
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -285,8 +300,8 @@
   border-radius: 5px;
   margin: 10px 0 ;
 }
-.contentApps{
-  width: 70%;
+.appsbtn .contentc {
+  width: 67%;
   overflow: hidden;
   background-color:rgba(246, 246, 246, 0.45) ;
   margin-top: -8px;
@@ -296,6 +311,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3%;
 }
 .apps{
   margin-top: 2%;
@@ -307,7 +323,7 @@
 .apps img{
   position: absolute;
   border-radius: 10px;
-  width: 80%;
+  width: 90%;
   height: 223px;
   object-fit: cover;
 }
@@ -315,7 +331,7 @@
   position: absolute;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 80%;
+  width: 90%;
   height: 223px;
   border-radius: 10px;
 }
@@ -413,10 +429,18 @@
   border-radius: 20px;
   overflow: hidden; 
   position: relative; 
-
-
 }
-
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 20px; 
+  pointer-events: none; 
+}
 .cards h2{
   position: absolute; 
   bottom: 0;
@@ -564,14 +588,14 @@
     margin-bottom: 5px;
     }
                                           /***** Apropos.js****/
-.ContainerApps{
+.appsbtn .container-colaps{
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.btnApps{
+.appsbtn .butcola{
   text-align: start;
   color: white;
   width: 90%;
@@ -584,8 +608,8 @@
   border-radius: 5px;
   margin: 10px 0 ;
 }
-.contentApps{
-  width: 90%;
+.appsbtn .contentc{
+  width: 82%;
   overflow: hidden;
   background-color:rgba(246, 246, 246, 0.45) ;
   margin-top: -8px;
